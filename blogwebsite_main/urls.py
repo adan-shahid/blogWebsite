@@ -24,4 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', views.home, name='home'),
     path("", blog.views.index, name="index"),
+    path("index", blog.views.post_detail, name="blog-post-detail")
 ]
