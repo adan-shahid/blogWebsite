@@ -7,7 +7,7 @@ def index(request):
     return render(request, "blog/index.html")
 
 def	post_detail(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all()  
     context = {"posts":posts}
     return render(request, "blog/post-detail.html", context)
     
