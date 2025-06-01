@@ -6,6 +6,8 @@ from .models import Post
 def index(request):
     return render(request, "blog/index.html")
 
-def post_detail(request, slug):
-    post = get_object_or_404(Post, slug=slug)
-    return render(request, "blog/index.html", {"post":post})
+def	post_detail(request):
+    posts = Post.objects.all()
+    context = {"posts":posts}
+    return render(request, "blog/post-detail.html", context)
+    
